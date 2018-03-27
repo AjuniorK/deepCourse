@@ -22,7 +22,7 @@ pd.options.display.max_columns = 1000
 pd.options.display.max_rows = 350
 pd.options.display.width = 1200
 
-api_key = "AIzaSyD-DxvunxYFlB1h89qk3sZw2667FfJBNUU"
+api_key = ""
 
 parameters = {"part": "snippet",
               "maxResults": 5,
@@ -212,13 +212,19 @@ def get_2012_data(candidates):
     return get_data(candidates, publishedAfter="2012-08-04T00:00:00Z", publishedBefore="2012-11-04T00:00:00Z")
 
 def get_2014_data(candidates):
-    return get_data(candidates, publishedAfter="2014-08-04T00:00:00Z", publishedBefore="2014-11-04T00:00:00Z")
+    return get_data(candidates, publishedAfter="2014-01-04T00:00:00Z", publishedBefore="2014-12-04T00:00:00Z")
+    
+def get_2015_data(candidates):
+    return get_data(candidates, publishedAfter="2015-01-04T00:00:00Z", publishedBefore="2015-01-04T00:00:00Z")
 
 def get_2016_data(candidates):
-    return get_data(candidates, publishedAfter="2016-08-04T00:00:00Z", publishedBefore="2016-11-04T00:00:00Z")
+    return get_data(candidates, publishedAfter="2016-01-04T00:00:00Z", publishedBefore="2016-12-04T00:00:00Z")
+
+def get_2017_data(candidates):
+    return get_data(candidates, publishedAfter="2017-01-04T00:00:00Z", publishedBefore="2017-12-04T00:00:00Z")
 
 def get_2018_data(candidates):
-    return get_data(candidates, publishedAfter="2018-01-04T00:00:00Z", publishedBefore="2018-03-04T00:00:00Z")
+    return get_data(candidates, publishedAfter="2018-01-04T00:00:00Z", publishedBefore="2018-12-04T00:00:00Z")
     
 def get_2014_2018_data(theme, cities, regionCode):
     return get_data(theme, publishedAfter="2016-08-04T00:00:00Z", publishedBefore="2018-01-04T00:00:00Z", cities=cities, regionCode=regionCode)
